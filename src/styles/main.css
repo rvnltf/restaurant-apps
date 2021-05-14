@@ -5,7 +5,7 @@ img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 body {
@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,7 +54,7 @@ header nav ul li a {
     position: relative;
     text-decoration: none;
     margin: 0 20px;
-    color: black;
+    color: ivory;
     letter-spacing: 1px;
     font-size: 18px;
     font-weight: 500px;
@@ -62,4 +63,50 @@ header nav ul li a {
 
 header.sticky nav ul li a {
     font-size: 16px;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0px;
+    background-color: ivory;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    width: 100%;
+    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-position: center;
+    background-color: ivory;
+}
+.hero {
+    max-width: 900px;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    padding: 40px;
+}
+
+.hero-title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 72px;
+}
+
+.hero-tagline {
+    color: ivory;
+    margin-top: 16px;
+    font-size: 22px;
+    line-height: 35px;
 }
