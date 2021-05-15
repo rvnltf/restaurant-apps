@@ -8,8 +8,13 @@ img {
     font-family: 'Varela Round', sans-serif;
 }
 
-body {
-    background-color: ivory;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f2ed;
+    color: #2d2d28;
 }
 
 header {
@@ -26,7 +31,7 @@ header {
 }
 
 header.sticky {
-    background: #fff;
+    background: #fffff0;
 }
 
 header .logo img {
@@ -54,15 +59,15 @@ header nav ul li a {
     position: relative;
     text-decoration: none;
     margin: 0 20px;
-    color: ivory;
+    color: #f7f2ed ;
     letter-spacing: 1px;
     font-size: 18px;
-    font-weight: 500px;
     transition: 0.6s;
 }
 
 header.sticky nav ul li a {
     font-size: 16px;
+    color: #2d2d28;
 }
 
 .nav-link:after {
@@ -73,7 +78,7 @@ header.sticky nav ul li a {
     height: 2px;
     bottom: -5px;
     left: 0px;
-    background-color: ivory;
+    background-color: #f7f2ed ;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -83,6 +88,18 @@ header.sticky nav ul li a {
     transform-origin: bottom left;
 }
 
+header.sticky nav ul li a:after {
+    background-color: #2d2d28;
+}
+
+header.sticky nav ul li a:hover {
+    color: #ff9e16;
+}
+
+header.sticky nav ul li a:hover:after {
+    background-color: #ff9e16;
+}
+
 .jumbotron {
     display: flex;
     align-items: center;
@@ -90,23 +107,117 @@ header.sticky nav ul li a {
     width: 100%;
     background-image: url("../public/images/heros/hero-image_4.jpg");
     background-position: center;
-    background-color: ivory;
+    background-color: #f7f2ed ;
 }
+
 .hero {
     max-width: 900px;
-    /* background-color: rgba(255, 255, 255, 0.2); */
     padding: 40px;
 }
 
 .hero-title {
-    color: #fff;
+    color: #f7f2ed;
     font-weight: 500;
     font-size: 72px;
 }
 
 .hero-tagline {
-    color: ivory;
+    color: #f7f2ed ;
     margin-top: 16px;
     font-size: 22px;
     line-height: 35px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.odd {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    justify-items: center;
+    padding: 80px;
+}
+
+.odd-figure {
+    width: 65%;
+}
+
+.odd-figure img {
+    width: 100%;
+    border: white 5px solid;
+    box-shadow: 5px 5px 10px #aaaaaa;
+    transition: 0.6s;
+}
+
+.odd-figure img:hover {
+    transform: rotate(5deg);
+}
+
+.odd-content { 
+    width: 100%;
+}
+
+.odd-title {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.odd-description {
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.button {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 28px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #2d2d28;
+    border: 2px solid #2d2d28 ;
+    background-color: #f7f2ed;
+    border-radius: 5px;
+    transition: 0.6s;
+    box-shadow: 3px 3px 1px #aaaaaa;
+}
+
+.button:hover {
+    background-color: #ff9e16;
+}
+
+
+.even {
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.even-figure {
+    width: 100%;
+    overflow: hidden;
+}
+
+.even-content { 
+    width: 100%;
+    background-color: #2d2d28;
+    color: #f7f2ed;
+}
+
+.even-title {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.even-description {
+    font-size: 18px;
+    margin-top: 12px;
 }
