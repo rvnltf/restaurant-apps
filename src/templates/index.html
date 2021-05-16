@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet"> 
-        <title>odd Apps Starter Project</title>
+        <title>Peto Resto</title>
     </head>
     <body>
         <header>
             <a href="#" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
+            <a id="menu" class="menu">☰</a>
             <nav id="navigation" class="navbar">
                 <ul class="nav">
                     <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
@@ -32,7 +33,7 @@
                         <h1 class="odd-title">Bring Your Phone Cafe</h1>
                         <p class="odd-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eum
                             facere nostrum officiis qui quidem ratione similique, soluta veniam voluptatum. </p>
-                        <button class="button">Read More</button>
+                        <button class="button" style="box-shadow: 3px 3px 1px #aaaaaa;">Read More</button>
                     </div>
                     <figure class="odd-figure">
                         <img src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41" alt="Dicoding Fact Sheet">
@@ -40,7 +41,6 @@
                 </article>
                 <article class="even">
                     <figure class="even-figure">
-                        <img src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/07" alt="Dicoding Fact Sheet">
                     </figure>
                     <div class="even-content">
                         <h1 class="even-title">Bring Your Phone Cafe</h1>
@@ -62,11 +62,9 @@
                 </article>
             </section>
         </main>
-        <script>
-            window.addEventListener("scroll", ()=>{
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY>0);
-            })
-        </script>
+
+        <footer>
+            <p>Copyright © 2021 - <a href="#">Peto Resto Apps</a></p>
+        </footer>
     </body>
 </html>
