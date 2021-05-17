@@ -11,18 +11,22 @@ window.addEventListener("scroll", ()=>{
 
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('.jumbotron');
+const header = document.querySelector('header');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#navigation');
 
 menu.addEventListener('click', function (event) {
     drawer.classList.toggle('open');
+    header.classList.toggle('header');
     event.stopPropagation();
 });
 
 hero.addEventListener('click', function () {
     drawer.classList.remove('open');
+    header.classList.remove('header');
 });
 
 main.addEventListener('click', function () {
     drawer.classList.remove('open');
+    header.classList.remove('header');
 });
