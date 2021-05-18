@@ -1,6 +1,6 @@
 
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 499px) {
     .navbar {
         z-index: 10;
         background-color: #f7f2ed;
@@ -11,7 +11,6 @@
         transition: transform 0.3s ease;
         overflow: visible;
     }
-
 
     .open {
         -webkit-transform: translate(0, 100px);
@@ -26,27 +25,110 @@
         color: #2d2d28;
     }
 
+    header.sticky .menu {
+        color: #2d2d28;
+    }
     .nav-item {
         display: list-item;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 455px) {
-    .menu {
-        display: none;
     }
 }
 
 @media screen and (min-width: 500px) {
-}
+    .menu {
+        display: none;
+    }
+    
+    header .logo img {
+        width: 120px;
+        transition: 0.6s;
+        margin: 0 30px;
+    }
 
-@media screen and (min-width: 650px) {
+    header.sticky .logo img {
+        width: 80px;
+    }
+    .navbar {
+        text-align: right;
+    }
+    .navbar {
+        color: #f7f2ed;
+    }
+    .nav-link {
+        color: #f7f2ed;
+    }
+
+    header.sticky .navbar .nav .nav-item .nav-link {
+        color: #2d2d28;
+    }
+
+    header.sticky .navbar .nav .nav-item .nav-link:hover {
+        color: #ff9e16;
+    }
+
+    .nav-link:hover {
+        color: #ff9e16; 
+    }
+    .nav-link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0px;
+        color: #ff9e16; 
+        background-color: #ff9e16 ;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .nav-link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    header.sticky nav ul li a:after {
+        background-color: #ff9e16;
+    }
+    header.sticky nav ul li a:hover {
+        color: #ff9e16;
+    }
+    header.sticky nav ul li a:hover:after {
+        background-color: #ff9e16;
+    }
+    .hero {
+        max-width: 900px;
+        padding: 40px;
+    }
+    .jumbotron {
+        min-height: 500px;
+    }
+    .hero-title {
+        color: #f7f2ed;
+        font-weight: 500;
+        font-size: 72px;
+    }
+    .hero-tagline {
+        color: #f7f2ed;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .odd {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .odd-figure {
+        width: 70%;
+    }
+
+    .odd-content { 
+        padding: 30px;
+    }
 }
 
 @media screen and (min-width: 700px) {
+
 }
 
 @media screen and (min-width: 800px) {
