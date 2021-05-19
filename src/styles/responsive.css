@@ -1,10 +1,10 @@
 
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 699px) {
     .navbar {
         z-index: 10;
         background-color: #f7f2ed;
-        height: 130px;
+        height: 135px;
         position: absolute;
         -webkit-transform: translate(0,-120px);
         transform: translate(0,-120px);
@@ -36,6 +36,42 @@
 }
 
 @media screen and (min-width: 500px) {
+    .hero-title {
+        font-size: 60px;
+    }
+    .hero-tagline {
+        font-size: 18px;
+    }
+    .odd {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .odd-figure {
+        width: 70%;
+    }
+
+    .odd-content { 
+        padding: 30px;
+    }
+    .even {
+        height: 300px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .even-figure img {
+        width: 100%;
+    }
+    .even-content {
+        opacity: 1;
+        position: relative;
+        background-color: #2d2d28;
+        padding: 50px;
+    }
+    .even:hover .even-content{
+        background-color: #2d2d28;
+    }
+}
+
+@media screen and (min-width: 700px) {
     .menu {
         display: none;
     }
@@ -104,38 +140,12 @@
         min-height: 500px;
     }
     .hero-title {
-        color: #f7f2ed;
-        font-weight: 500;
         font-size: 72px;
     }
     .hero-tagline {
-        color: #f7f2ed;
-        margin-top: 16px;
         font-size: 22px;
-        line-height: 35px;
     }
-    .odd {
-        grid-template-columns: 1fr 1fr;
+    .even-figure img {
+        width: 120%;
     }
-
-    .odd-figure {
-        width: 70%;
-    }
-
-    .odd-content { 
-        padding: 30px;
-    }
-}
-
-@media screen and (min-width: 700px) {
-
-}
-
-@media screen and (min-width: 800px) {
-}
-
-@media screen and (min-width: 900px) {
-}
-
-@media screen and (min-width: 1200px) {
 }
