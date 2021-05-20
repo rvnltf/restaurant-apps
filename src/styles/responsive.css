@@ -53,12 +53,18 @@
     .odd-content { 
         padding: 30px;
     }
+    .odd-title {
+        font-size: 36px; 
+    }
     .even {
         height: 300px;
         grid-template-columns: 1fr 1fr;
     }
     .even-figure img {
         width: 100%;
+    }
+    .even-title {
+        font-size: 36px; 
     }
     .even-content {
         opacity: 1;
@@ -148,4 +154,11 @@
     .even-figure img {
         width: 120%;
     }
+    .review p {
+        font-size: 14px;
+    }
+    .rating .star {
+        font-size: 16px;
+    }
+    
 }
