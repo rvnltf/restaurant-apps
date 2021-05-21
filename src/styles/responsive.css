@@ -1,47 +1,4 @@
-
-
-@media screen and (max-width: 699px) {
-    .navbar {
-        z-index: 10;
-        background-color: #f7f2ed;
-        height: 135px;
-        position: absolute;
-        -webkit-transform: translate(0,-120px);
-        transform: translate(0,-120px);
-        transition: transform 0.3s ease;
-        overflow: visible;
-    }
-
-    .open {
-        -webkit-transform: translate(0, 100px);
-        transform: translate(0, 100px);
-    }
-
-    .header {
-        background-color: #f7f2ed;
-    }
-
-    .header .menu {
-        color: #2d2d28;
-    }
-
-    header.sticky .menu {
-        color: #2d2d28;
-    }
-    .nav-item {
-        display: list-item;
-        border-bottom: 1px solid #E0E0E0;
-        width: 100%;
-    }
-}
-
 @media screen and (min-width: 500px) {
-    .hero-title {
-        font-size: 60px;
-    }
-    .hero-tagline {
-        font-size: 18px;
-    }
     .odd {
         grid-template-columns: 1fr 1fr;
     }
@@ -78,79 +35,27 @@
 }
 
 @media screen and (min-width: 700px) {
-    .menu {
-        display: none;
-    }
-    
-    header .logo img {
-        width: 120px;
-        transition: 0.6s;
-        margin: 0 30px;
-    }
-
-    header.sticky .logo img {
+    /* header.sticky app-bar .logo img {
         width: 80px;
     }
-    .navbar {
-        text-align: right;
-    }
-    .navbar {
-        color: #f7f2ed;
-    }
-    .nav-link {
-        color: #f7f2ed;
-    }
 
-    header.sticky .navbar .nav .nav-item .nav-link {
+    header.sticky app-bar .navbar .nav .nav-item .nav-link {
         color: #2d2d28;
     }
 
-    header.sticky .navbar .nav .nav-item .nav-link:hover {
+    header.sticky app-bar .navbar .nav .nav-item .nav-link:hover {
         color: #ff9e16;
     }
 
-    .nav-link:hover {
-        color: #ff9e16; 
-    }
-    .nav-link:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: -5px;
-        left: 0px;
-        color: #ff9e16; 
-        background-color: #ff9e16 ;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-    .nav-link:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-    header.sticky nav ul li a:after {
+    header.sticky app-bar nav ul li a:after {
         background-color: #ff9e16;
     }
-    header.sticky nav ul li a:hover {
+    header.sticky app-bar nav ul li a:hover {
         color: #ff9e16;
     }
-    header.sticky nav ul li a:hover:after {
-        background-color: #ff9e16;
-    }
-    .hero {
-        max-width: 900px;
-        padding: 40px;
-    }
-    .jumbotron {
-        min-height: 500px;
-    }
-    .hero-title {
-        font-size: 72px;
-    }
-    .hero-tagline {
-        font-size: 22px;
-    }
+    header.sticky app-bar nav ul li a:hover:after {
+        background-color: #ff9e16; 
+    }*/
     .even-figure img {
         width: 120%;
     }
