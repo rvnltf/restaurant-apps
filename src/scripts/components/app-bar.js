@@ -9,7 +9,7 @@ class AppBar extends HTMLElement {
         this.render();
             
         window.addEventListener("scroll", ()=>{
-            this.classList.toggle("sticky", window.scrollY>0);
+            this.classList.toggle("sticky", window.scrollY>200);
         });
 
         const menu = this.shadowDOM.querySelector("#menu");
@@ -125,6 +125,24 @@ class AppBar extends HTMLElement {
             }
         }
         @media screen and (min-width: 700px) {
+            :host(.sticky) .logo img {
+                width: 80px;
+            }
+            :host(.sticky) .navbar .nav .nav-item .nav-link {
+                color: #2d2d28;
+            }
+            :host(.sticky) .navbar .nav .nav-item .nav-link:hover {
+                color: #ff9e16;
+            }
+            :host(.sticky) nav ul li a:after {
+                background-color: #ff9e16;
+            }
+            :host(.sticky)  nav ul li a:hover {
+                color: #ff9e16;
+            }
+            :host(.sticky) nav ul li a:hover:after {
+                background-color: #ff9e16; 
+            }
             .menu {
                 display: none;
             }
