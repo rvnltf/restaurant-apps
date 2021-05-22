@@ -14,11 +14,7 @@ class HeroElement extends HTMLElement {
     render() {
         this.shadowDOM.innerHTML = `
         <style>
-        .hero {
-            max-width: 500px;
-            padding: 20px;
-        }
-        .jumbotron {
+        :host {
             display: flex;
             align-items: center;
             min-height: 350px;
@@ -29,7 +25,10 @@ class HeroElement extends HTMLElement {
             color: #f7f2ed;
             transition: 0.6s;
         }
-        
+        .hero {
+            max-width: 500px;
+            padding: 20px;
+        }
         .hero-title {
             color: #f7f2ed;
             font-weight: 500;
@@ -55,7 +54,7 @@ class HeroElement extends HTMLElement {
                 max-width: 900px;
                 padding: 40px;
             }
-            .jumbotron {
+            :host {
                 min-height: 500px;
             }
             .hero-title {
@@ -66,12 +65,10 @@ class HeroElement extends HTMLElement {
             }
         }
         </style>
-        <div class="jumbotron">
             <div class="hero">
                 <h1 class="hero-title">Savory dish to share</h1>
                 <p class="hero-tagline">In this way such herbs may be had throughout the season with almost the full flavour of the fresh herb.</p>
             </div>
-        </div>
         `;
     }
  }
