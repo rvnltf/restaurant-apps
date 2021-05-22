@@ -5,7 +5,8 @@ class MainContent extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
   
-    connectedCallback(){
+    set restaurant(restaurant){
+        this._restaurant = restaurant;
         this.render();
     }
 
@@ -246,14 +247,14 @@ class MainContent extends HTMLElement {
             <section class="content">
                 <article class="odd">
                     <figure class="odd-figure">
-                        <img src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41" alt="Dicoding Fact Sheet">
+                        <img src="${this._restaurant.pictureId}" alt="Dicoding Fact Sheet">
                     </figure>
                     <div class="odd-content">
-                        <h1 class="odd-title">Bring Your Phone Cafe</h1>
+                        <h1 class="odd-title">${this._restaurant.name}</h1>
                         <div class="review">
-                            <p>Medan</p>
-                            <p>4.3</p>
-                            <div class="rating" style="--nilai: 0.42;">
+                            <p>${this._restaurant.city}</p>
+                            <p>${this._restaurant.rating}</p>
+                            <div class="rating" style="--nilai: 0.${this._restaurant.rating.replace('.','')};">
                                 <div class="ratings">
                                     <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
                                     </div>
@@ -262,8 +263,7 @@ class MainContent extends HTMLElement {
                                 </div>
                             </div>
                         </div>
-                        <p class="odd-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eum
-                            facere nostrum officiis qui quidem ratione similique, soluta veniam voluptatum. </p>
+                        <p class="odd-description">${this._restaurant.description} </p>
                         <button class="button" style="box-shadow: 3px 3px 1px #aaaaaa;">Read More</button>
                     </div>
                 </article>
