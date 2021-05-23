@@ -2,7 +2,6 @@ class AppBar extends HTMLElement {
      
     constructor() {
         super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
     }
   
     connectedCallback(){
@@ -12,10 +11,10 @@ class AppBar extends HTMLElement {
             this.classList.toggle("sticky", window.scrollY>200);
         });
 
-        const menu = this.shadowDOM.querySelector("#menu");
+        const menu = this.querySelector("#menu");
         const hero = document.querySelector('hero-element');
         const main = document.querySelector('main');
-        const drawer = this.shadowDOM.querySelector('#navigation');
+        const drawer = this.querySelector('#navigation');
         
         menu.addEventListener('click', event => {
             drawer.classList.toggle('open');
@@ -34,30 +33,8 @@ class AppBar extends HTMLElement {
         });
     }
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style>
-        :host(.sticky) {
-            background: #f7f2ed;
-            box-shadow: 0 1px 5px grey;
-        }
-        :host(.sticky) .logo img {
-            width: 70px;
-        }
-        :host(.sticky) .menu {
-            color: #2d2d28;
-            font-size: 32px;
-            margin: 0 20px;
-        }
-        :host{
-            display: block;
-            z-index: 10;
-            position: fixed;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.6s;
-        }
         .logo img {
             width: 100px;
             transition: 0.6s;
@@ -117,32 +94,8 @@ class AppBar extends HTMLElement {
                 border-bottom: 1px solid #E0E0E0;
                 width: 100%;
             }
-            :host(.header) {
-                background-color: #f7f2ed;
-            }
-            :host(.header) .menu {
-                color: #2d2d28;
-            }
         }
         @media screen and (min-width: 700px) {
-            :host(.sticky) .logo img {
-                width: 80px;
-            }
-            :host(.sticky) .navbar .nav .nav-item .nav-link {
-                color: #2d2d28;
-            }
-            :host(.sticky) .navbar .nav .nav-item .nav-link:hover {
-                color: #ff9e16;
-            }
-            :host(.sticky) nav ul li a:after {
-                background-color: #ff9e16;
-            }
-            :host(.sticky)  nav ul li a:hover {
-                color: #ff9e16;
-            }
-            :host(.sticky) nav ul li a:hover:after {
-                background-color: #ff9e16; 
-            }
             .menu {
                 display: none;
             }
@@ -182,7 +135,6 @@ class AppBar extends HTMLElement {
             }
         }
         </style>
-
         <a href="#" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
         <a href="#" id="menu" class="menu">☰</a>
         <nav id="navigation" class="navbar">

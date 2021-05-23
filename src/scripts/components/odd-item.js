@@ -2,7 +2,6 @@ class OddItem extends HTMLElement {
      
     constructor() {
         super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
     }
   
     set restaurant(restaurant){
@@ -11,7 +10,7 @@ class OddItem extends HTMLElement {
     }
 
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
             <style>
             .odd {
                 display: grid;

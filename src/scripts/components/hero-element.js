@@ -1,10 +1,7 @@
 import foto from "../../public/images/heros/hero-image_4.jpg";
-
 class HeroElement extends HTMLElement {
-     
     constructor() {
         super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
     }
   
     connectedCallback(){
@@ -12,12 +9,12 @@ class HeroElement extends HTMLElement {
     }
 
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style>
-        :host {
+        .jumbotron {
             display: flex;
             align-items: center;
-            min-height: 350px;
+            min-height: 500px;
             width: 100%;
             padding: 30px;
             background-image: url("${foto}");
@@ -65,10 +62,12 @@ class HeroElement extends HTMLElement {
             }
         }
         </style>
+        <div class="jumbotron">
             <div class="hero">
                 <h1 class="hero-title">Savory dish to share</h1>
                 <p class="hero-tagline">In this way such herbs may be had throughout the season with almost the full flavour of the fresh herb.</p>
             </div>
+        </div>
         `;
     }
  }

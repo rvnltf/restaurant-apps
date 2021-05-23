@@ -7,12 +7,12 @@ const main = () => {
             if(i%2===0){
                 const evenItem = document.querySelector('even-item');
                 evenItem.restaurant = restaurant;
-                document.appendChild(evenItem);
+                document.body.appendChild(evenItem);
                 // console.log(restaurant);
             } else {
                 const oddItem = document.querySelector('odd-item');
                 oddItem.restaurant = restaurant;
-                document.appendChild(oddItem);
+                document.body.appendChild(oddItem);
                 // console.log(restaurant);
             }
             i++;

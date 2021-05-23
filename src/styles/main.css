@@ -25,6 +25,28 @@ body, html {
     top: 20px;
     left: 20px;
 }
+app-bar.sticky {
+    background: #f7f2ed;
+    box-shadow: 0 1px 5px grey;
+}
+app-bar.sticky .logo img {
+    width: 70px;
+}
+app-bar.sticky .menu {
+    color: #2d2d28;
+    font-size: 32px;
+    margin: 0 20px;
+}
+app-bar{
+    display: block;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
 footer {
     background-color: #2d2d28;
     color: #f7f2ed;
