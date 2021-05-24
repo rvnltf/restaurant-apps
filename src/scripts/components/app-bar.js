@@ -67,7 +67,7 @@ class AppBar extends HTMLElement {
             position: relative;
             text-decoration: none;
             margin: 0 20px;
-            color: #2d2d28 ;
+            color: #f7f2ed ;
             letter-spacing: 1px;
             font-size: 20px;
             transition: 0.6s;
@@ -106,11 +106,6 @@ class AppBar extends HTMLElement {
             }
             .navbar {
                 text-align: right;
-            }
-            .navbar {
-                color: #f7f2ed;
-            }
-            .nav-link {
                 color: #f7f2ed;
             }
             .nav-link:hover {
@@ -135,13 +130,13 @@ class AppBar extends HTMLElement {
             }
         }
         </style>
-        <a href="#" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
+        <a href="" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
         <a href="#" id="menu" class="menu">☰</a>
         <nav id="navigation" class="navbar">
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Favorite</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="https://www.linkedin.com/in/rvnltf/" class="nav-link">About Us</a></li>
             </ul>
         </nav>
         `;

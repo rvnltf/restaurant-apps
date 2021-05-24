@@ -10,6 +10,7 @@ class OddItem extends HTMLElement {
     }
 
     render() {
+        let rating = this._restaurant.rating.toString();
         this.innerHTML = `
             <style>
             .odd {
@@ -132,6 +133,7 @@ class OddItem extends HTMLElement {
                 background-color: #f7f2ed;
                 border-radius: 8px;
                 transition: 0.6s;
+                box-shadow: 3px 3px 1px #aaaaaa;
             }
             .button:hover {
                 background-color: #ff9e16;
@@ -158,14 +160,14 @@ class OddItem extends HTMLElement {
             </style>
                 <article class="odd">
                     <figure class="odd-figure">
-                        <img src="${this._restaurant.pictureId}" alt="Dicoding Fact Sheet">
+                        <img src="${this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="odd-content">
                         <h1 class="odd-title">${this._restaurant.name}</h1>
                         <div class="review">
                             <p>${this._restaurant.city}</p>
-                            <p>${this._restaurant.rating}</p>
-                            <div class="rating" style="--nilai: 0.3;">
+                            <p>${rating}</p>
+                            <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
                                 <div class="ratings">
                                     <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
                                     </div>
@@ -175,7 +177,7 @@ class OddItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="odd-description">${this._restaurant.description} </p>
-                        <button class="button" style="box-shadow: 3px 3px 1px #aaaaaa;">Read More</button>
+                        <button class="button" aria-label="read more">Read More</button>
                     </div>
                 </article>
         `;

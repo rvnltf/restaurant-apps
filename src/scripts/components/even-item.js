@@ -10,6 +10,7 @@ class evenItem extends HTMLElement {
     }
 
     render() {
+        let rating = this._restaurant.rating.toString();
         this.innerHTML = `
             <style>
             .review {
@@ -186,14 +187,14 @@ class evenItem extends HTMLElement {
             </style>
                 <article class="even">
                     <figure class="even-figure">
-                        <img src="${this._restaurant.pictureId}" alt="Dicoding Fact Sheet">
+                        <img src="${this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="even-content">
                         <h1 class="even-title">${this._restaurant.name}</h1>
                         <div class="review">
                             <p>${this._restaurant.city}</p>
-                            <p>${this._restaurant.rating}</p>
-                            <div class="rating" style="--nilai: 0.3;">
+                            <p>${rating}</p>
+                            <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
                                 <div class="ratings">
                                     <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
                                     </div>
@@ -203,7 +204,7 @@ class evenItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="even-description">${this._restaurant.description}</p>
-                        <button class="button">Read More</button>
+                        <button class="button" aria-label="read more">Read More</button>
                     </div>
                 </article>
         `;
