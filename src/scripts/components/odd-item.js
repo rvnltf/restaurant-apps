@@ -133,7 +133,6 @@ class OddItem extends HTMLElement {
                 background-color: #f7f2ed;
                 border-radius: 8px;
                 transition: 0.6s;
-                box-shadow: 3px 3px 1px #aaaaaa;
             }
             .button:hover {
                 background-color: #ff9e16;
@@ -177,7 +176,7 @@ class OddItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="odd-description">${this._restaurant.description} </p>
-                        <button class="button" aria-label="read more">Read More</button>
+                        <button class="button" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</button>
                     </div>
                 </article>
         `;
