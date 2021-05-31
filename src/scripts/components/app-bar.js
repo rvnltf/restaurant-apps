@@ -41,6 +41,8 @@ class AppBar extends HTMLElement {
             margin: 0 10px;
         }
         .menu {
+            min-width: 44px;
+            min-height: 44px;
             display: block;
             color: #f7f2ed;
             font-size: 36px;
@@ -64,6 +66,8 @@ class AppBar extends HTMLElement {
             padding: 9px;
         }
         .nav-link {
+            min-width: 44px;
+            min-height: 44px;
             position: relative;
             text-decoration: none;
             margin: 0 20px;
@@ -130,7 +134,7 @@ class AppBar extends HTMLElement {
             }
         }
         </style>
-        <a href="" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
+        <a href="/" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
         <a href="#" id="menu" class="menu">☰</a>
         <nav id="navigation" class="navbar">
             <ul class="nav">

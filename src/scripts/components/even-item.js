@@ -77,6 +77,8 @@ class evenItem extends HTMLElement {
                 color: #0003;
             }
             .button {
+                min-width: 44px;
+                min-height: 44px;
                 font-family: 'Nanum Gothic', sans-serif;
                 font-weight: bold;
                 text-transform: uppercase;
