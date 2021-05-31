@@ -35,6 +35,10 @@ class AppBar extends HTMLElement {
     render() {
         this.innerHTML = `
         <style>
+        .logo {
+            min-width: 44px;
+            min-height: 44px;
+        }
         .logo img {
             width: 100px;
             transition: 0.6s;
