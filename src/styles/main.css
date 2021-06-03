@@ -28,6 +28,52 @@ body, html {
     top: 20px;
     left: 20px;
 }
+app-bar .logo {
+    min-width: 44px;
+    min-height: 44px;
+}
+app-bar .logo img {
+    width: 100px;
+    transition: 0.6s;
+    margin: 0 10px;
+}
+.menu {
+    min-width: 44px;
+    min-height: 44px;
+    display: block;
+    color: #f7f2ed;
+    font-size: 36px;
+    text-decoration: none;
+    margin: 0 30px;
+}
+.navbar {
+    width: 100%;
+}
+.nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.nav-item {
+    display: inline-block;
+    list-style: none;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 24px;
+    padding: 9px;
+}
+app-bar .navbar .nav .nav-item a {
+    min-width: 44px;
+    min-height: 44px;
+    position: relative;
+    text-decoration: none;
+    margin: 0 20px;
+    color: #f7f2ed ;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.6s;
+    padding: 15px 0;
+}
 app-bar.sticky {
     background: #f7f2ed;
     box-shadow: 0 1px 5px grey;
@@ -43,9 +89,6 @@ app-bar.header .open .nav .nav-item .nav-link {
 }
 app-bar.header .menu {
     color: #2d2d28;
-}
-app-bar .navbar .nav .nav-item .nav-link {
-    color: #f7f2ed;
 }
 app-bar.sticky .navbar .nav .nav-item .nav-link {
     color: #2d2d28;

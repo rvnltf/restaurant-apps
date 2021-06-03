@@ -1,8 +1,90 @@
 @media screen and (max-width: 699px) { 
+    app-bar.header {
+        background-color: #f7f2ed;
+    }
+    app-bar.header .menu {
+        color: #2d2d28;
+    }
+    app-bar.sticky {
+        background-color: #f7f2ed;
+    }
+    app-bar.sticky {
+        color: #2d2d28;
+    }
+    .navbar {
+        display: none;
+        z-index: 10;
+        background-color: #f7f2ed;
+        max-height: 0;
+        position: absolute;
+        transition: max-height 2s ease;
+        overflow: hidden;
+    }
+    .open {
+        display: block;
+        max-height: 135px;
+        transform: translate(0, 100px);
+        transition: max-height 2s ease;
+        box-shadow: 1px 1px 3px grey;
+    }
+    .nav-item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 700px) {
     app-bar.sticky .logo img {
         width: 80px;
+    }
+    app-bar.sticky .navbar .nav .nav-item .nav-link {
+        color: #2d2d28;
+    }
+    app-bar.sticky .navbar .nav .nav-item .nav-link:hover {
+        color: #ff9e16;
+    }
+    app-bar.sticky nav ul li a:after {
+        background-color: #ff9e16;
+    }
+    app-bar.sticky  nav ul li a:hover {
+        color: #ff9e16;
+    }
+    app-bar.sticky nav ul li a:hover:after {
+        color: #ff9e16;
+        background-color: #ff9e16; 
+    }
+    .menu {
+        display: none;
+    }
+    .logo img {
+        width: 120px;
+        transition: 0.6s;
+        margin: 0 30px;
+    }
+    .navbar {
+        text-align: right;
+        color: #f7f2ed;
+    }
+    .nav-link:hover {
+        color: #ff9e16; 
+    }
+    .nav-link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 10px;
+        left: 0px;
+        color: #ff9e16; 
+        background-color: #ff9e16 ;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    .nav-link:hover:after {
+        color: #ff9e16; 
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
 }
