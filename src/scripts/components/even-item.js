@@ -1,17 +1,12 @@
 class evenItem extends HTMLElement {
-     
-    constructor() {
-        super();
-    }
-  
-    set restaurant(restaurant){
-        this._restaurant = restaurant;
-        this.render();
-    }
+  set restaurant(restaurant) {
+    this._restaurant = restaurant;
+    this.render();
+  }
 
-    render() {
-        let rating = this._restaurant.rating.toString();
-        this.innerHTML = `
+  render() {
+    const rating = this._restaurant.rating.toString();
+    this.innerHTML = `
             <style>
             .review {
                 display: flex;
@@ -210,7 +205,7 @@ class evenItem extends HTMLElement {
                     </div>
                 </article>
         `;
-    }
- }
-  
- customElements.define("even-item", evenItem);
+  }
+}
+
+customElements.define('even-item', evenItem);

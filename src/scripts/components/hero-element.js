@@ -1,15 +1,12 @@
-import foto from "../../public/images/heros/hero-image_4.jpg";
-class HeroElement extends HTMLElement {
-    constructor() {
-        super();
-    }
-  
-    connectedCallback(){
-        this.render();
-    }
+import foto from '../../public/images/heros/hero-image_4.jpg';
 
-    render() {
-        this.innerHTML = `
+class HeroElement extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
         <style>
         .jumbotron {
             display: flex;
@@ -69,7 +66,7 @@ class HeroElement extends HTMLElement {
             </div>
         </div>
         `;
-    }
- }
-  
- customElements.define("hero-element", HeroElement);
+  }
+}
+
+customElements.define('hero-element', HeroElement);
