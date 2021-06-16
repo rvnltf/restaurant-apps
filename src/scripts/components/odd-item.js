@@ -1,12 +1,17 @@
 class OddItem extends HTMLElement {
-  set restaurant(restaurant) {
-    this._restaurant = restaurant;
-    this.render();
-  }
+     
+    constructor() {
+        super();
+    }
+  
+    set restaurant(restaurant){
+        this._restaurant = restaurant;
+        this.render();
+    }
 
-  render() {
-    const rating = this._restaurant.rating.toString();
-    this.innerHTML = `
+    render() {
+        let rating = this._restaurant.rating.toString();
+        this.innerHTML = `
             <style>
             .odd {
                 display: grid;
@@ -177,7 +182,7 @@ class OddItem extends HTMLElement {
                     </div>
                 </article>
         `;
-  }
-}
-
-customElements.define('odd-item', OddItem);
+    }
+ }
+  
+ customElements.define("odd-item", OddItem);
