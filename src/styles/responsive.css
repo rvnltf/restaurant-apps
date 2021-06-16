@@ -17,7 +17,7 @@
         background-color: #f7f2ed;
         max-height: 0;
         position: absolute;
-        transition: max-height 2s ease;
+        transition: max-height 3s ease;
         overflow: hidden;
     }
     .open {
@@ -25,12 +25,15 @@
         max-height: 135px;
         transform: translate(0, 100px);
         transition: max-height 2s ease;
-        box-shadow: 1px 1px 3px grey;
+        box-shadow: 1px 1px 3px grey;;
     }
     .nav-item {
         display: list-item;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
+    }
+    app-bar .navbar .nav .nav-item a {
+        color: #2d2d28 ;
     }
 }
 
