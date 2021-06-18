@@ -4,13 +4,14 @@ const DrawerInitiator = {
   }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer, appBar);
-      //   drawer.classList.toggle('open');
-      //   this.classList.toggle('header');
-      //   event.stopPropagation();
     });
 
     content.addEventListener('click', (event) => {
       this._closeDrawer(event, drawer, appBar);
+    });
+
+    window.addEventListener('scroll', () => {
+      appBar.classList.toggle('sticky', window.scrollY > 200);
     });
   },
 

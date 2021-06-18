@@ -1,9 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import './components/app-bar.js';
-import './components/hero-element.js';
-import './components/main-content.js';
+import './components/app-bar';
+import './components/hero-element';
 import App from './views/app';
 
 const app = new App({

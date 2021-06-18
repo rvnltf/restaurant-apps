@@ -2,10 +2,6 @@ class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();
 
-    // window.addEventListener("scroll", ()=>{
-    //     this.classList.toggle("sticky", window.scrollY>200);
-    // });
-
     // const menu = this.querySelector("#menu");
     // const hero = document.querySelector('hero-element');
     // const main = document.querySelector('main');
