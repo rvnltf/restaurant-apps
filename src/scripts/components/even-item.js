@@ -1,17 +1,14 @@
-class evenItem extends HTMLElement {
-     
-    constructor() {
-        super();
-    }
-  
-    set restaurant(restaurant){
-        this._restaurant = restaurant;
-        this.render();
-    }
+import CONFIG from "../globals/config";
 
-    render() {
-        let rating = this._restaurant.rating.toString();
-        this.innerHTML = `
+class evenItem extends HTMLElement {
+  set restaurant(restaurant) {
+    this._restaurant = restaurant;
+    this.render();
+  }
+
+  render() {
+    const rating = this._restaurant.rating.toString();
+    this.innerHTML = `
             <style>
             .review {
                 display: flex;
@@ -189,7 +186,7 @@ class evenItem extends HTMLElement {
             </style>
                 <article class="even">
                     <figure class="even-figure">
-                        <img src="${this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
+                        <img src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="even-content">
                         <h1 class="even-title">${this._restaurant.name}</h1>
@@ -210,7 +207,7 @@ class evenItem extends HTMLElement {
                     </div>
                 </article>
         `;
-    }
- }
-  
- customElements.define("even-item", evenItem);
+  }
+}
+
+customElements.define('even-item', evenItem);
