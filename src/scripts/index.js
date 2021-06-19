@@ -2,7 +2,6 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
 import './components/app-bar';
-import './components/hero-element';
 import App from './views/app';
 
 const app = new App({
@@ -11,11 +10,6 @@ const app = new App({
   content: document.querySelector('main'),
   appBar: document.querySelector('app-bar'),
 });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const mainContent = document.querySelector('main-content');
-//   mainContent.restaurant = data;
-// });
 
 window.addEventListener('hashchange', () => {
   app.renderPage();

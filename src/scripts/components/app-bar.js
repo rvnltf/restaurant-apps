@@ -1,27 +1,6 @@
 class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();
-
-    // const menu = this.querySelector("#menu");
-    // const hero = document.querySelector('hero-element');
-    // const main = document.querySelector('main');
-    // const drawer = this.querySelector('#navigation');
-
-    // menu.addEventListener('click', event => {
-    //     drawer.classList.toggle('open');
-    //     this.classList.toggle('header');
-    //     event.stopPropagation();
-    // });
-
-    // hero.addEventListener('click', () => {
-    //     drawer.classList.remove('open');
-    //     this.classList.remove('header');
-    // });
-
-    // main.addEventListener('click', () => {
-    //     drawer.classList.remove('open');
-    //     this.classList.remove('header');
-    // });
   }
 
   render() {

@@ -3,25 +3,21 @@
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import '../../components/odd-item';
 import '../../components/even-item';
+import '../../components/hero-element';
 
-// const main = () => {
-//   document.addEventListener('DOMContentLoaded', () => {
-//     const mainContent = document.querySelector('main-content');
-//     mainContent.restaurant = data;
-//   });
-// };
-// export default main;
 const Home = {
   async render() {
     return `
-    <section id="content"></section>
+    <section id="maincontent"></section>
     `;
   },
 
   async afterRender() {
-    const mainContent = document.querySelector('#content');
+    const mainContent = document.querySelector('#maincontent');
     const restaurants = await RestaurantDbSource.restaurantList();
-    mainContent.innerHTML = '';
+    const main = document.querySelector('main');
+    const heroElement = document.createElement('hero-element');
+    main.insertBefore(heroElement, main.firstElementChild);
     let i = 1;
     restaurants.forEach((restaurant) => {
       if (i % 2 === 0) {

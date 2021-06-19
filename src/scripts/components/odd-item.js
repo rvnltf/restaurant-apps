@@ -123,8 +123,9 @@ class OddItem extends HTMLElement {
                 min-height: 44px;
                 font-family: 'Nanum Gothic', sans-serif;
                 font-weight: bold;
+                font-size: 14px;
                 text-transform: uppercase;
-                margin-top: 32px;
+                top: 32px;
                 cursor: pointer;
                 padding: 13px 25px;
                 color: #2d2d28;
@@ -132,6 +133,8 @@ class OddItem extends HTMLElement {
                 background-color: #f7f2ed;
                 border-radius: 8px;
                 transition: 0.6s;
+                position: relative;
+                text-decoration: none;
             }
             .button:hover {
                 background-color: #ff9e16;
@@ -175,7 +178,7 @@ class OddItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="odd-description">${this._restaurant.description} </p>
-                        <button class="button" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</button>
+                        <a class="button" href="${`/#/restaurant/${this._restaurant.id}`}" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</a>
                     </div>
                 </article>
         `;
