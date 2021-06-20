@@ -1,5 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurantdb-source';
+import '../../components/restaurant-detail';
 
 const Restaurant = {
   async render() {
@@ -11,7 +12,10 @@ const Restaurant = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
-    console.log(restaurant);
+    const detail = document.querySelector('#detail');
+    const restaurantDetail = document.createElement('restaurant-detail');
+    restaurantDetail.restaurant = restaurant;
+    detail.appendChild(restaurantDetail);
   },
 };
 

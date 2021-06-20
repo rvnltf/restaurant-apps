@@ -7,7 +7,7 @@ class AppBar extends HTMLElement {
     this.innerHTML = `
         
         <a href="/" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
-        <a href="#" id="menu" class="menu" aria-label="navigation-menu">☰</a>
+        <button id="menu" class="menu" aria-label="navigation-menu">☰</button>
         <nav id="navigation" class="navbar">
             <ul class="nav">
                 <li class="nav-item"><a href="#/home" class="nav-link">Home</a></li>
