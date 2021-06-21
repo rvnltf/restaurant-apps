@@ -14,7 +14,7 @@ const Restaurant = {
     const restaurant = await RestaurantDbSource.restaurantDetail(url.id);
     const detail = document.querySelector('#detail');
     const restaurantDetail = document.createElement('restaurant-detail');
-    restaurantDetail.restaurant = restaurant;
+    restaurantDetail.restaurant = restaurant.restaurant;
     detail.appendChild(restaurantDetail);
   },
 };

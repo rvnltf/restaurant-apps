@@ -5,7 +5,6 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        
         <a href="/" class="logo"><img  src="./images/logo/logo.png" alt="Logo Peto"></a>
         <button id="menu" class="menu" aria-label="navigation-menu">☰</button>
         <nav id="navigation" class="navbar">
