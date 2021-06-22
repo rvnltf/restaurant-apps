@@ -12,158 +12,70 @@ body, html {
     color: #2d2d28;
 }
 
-main {
-	width: 80vw;
-	margin: 0 auto;
-}
-
-#cards {
-	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-}
-
 #card_1 {
 	--index: 1;
-}
-
-#card_2 {
-	--index: 2;
-}
-
-#card_3 {
-	--index: 3;
-}
-
-#card_4 {
-	--index: 4;
 }
 
 .card {
 	position: sticky;
 	top: 0;
-	padding-top: calc(var(--index) * var(--card-top-offset));
+	/* padding-top: calc(var(--index) * 10px); */
 }
-
-@supports (animation-timeline: works) {
-
-	@scroll-timeline cards-element-scrolls-in-body {
-		source: selector(body);
-		scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */
-			selector(#cards) start 1,
-			/* End when the start edge touches the start of the scrollport */
-			selector(#cards) start 0
-		;
-		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
-		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
-	}
-
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
-
-	@keyframes scale {
-		to {
-			transform:
-				scale(calc(
-					1.1
-					-
-					calc(0.1 * var(--reverse-index))
-				));
-		}
-	}
-}
-
 
 #cards {
 	list-style: none;
-	outline: calc(var(--outline-width) * 10) solid blue;
-	
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--numcards), var(--card-height));
-	gap: var(--card-margin);
 }
-
-.card {
-	outline: var(--outline-width) solid hotpink;
-}
-
 .card__content {
-	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-	background: rgb(255, 255, 255);
-	color: rgb(10, 5, 7);
-	border-radius: 1em;
+    position: relative;
+    height: 500px;
+	box-shadow: 0 2px 10px rgba(45, 45, 40, 0.1), 0 10px 20px rgba(45, 45, 40, 0.1);
+    background-color: #f7f2ed;
+    color: #2d2d28;
 	overflow: hidden;
 
 	display: grid;
-	grid-template-areas: "text img";
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: auto;
-
-	align-items: stretch;
-	outline: var(--outline-width) solid lime;
 }
 
 .card__content > div {
-	grid-area: text;
-	width: 80%;
-	place-self: center;
-	text-align: left;
-
-	display: grid;
-	gap: 1em;
-	place-items: start;
+    padding: 30px;
 }
 
 .card__content > figure {
-	grid-area: img;
+    width: 100%;
 	overflow: hidden;
+}
+
+.caption { 
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(45, 45, 40, 0.65 );
+}
+
+.address {
+    padding-bottom: 5px;
+    color: gray;
+    font-size: 13px;
+}
+
+.description {
+    color: #2d2d28;
+    font-size: 18px;
+    text-align: justify;
 }
 
 .card__content > figure > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-h1 {
-	font-weight: 300;
-	font-size: 3.5em;
-}
-
-h2 {
-	font-weight: 300;
-	font-size: 2.5em;
-}
-
-p {
-	font-family: sans-serif;
-	font-weight: 300;
-	line-height: 1.42;
-}
-
-.btn {
-	background: rgb(188 87 36);
-	color: rgb(255 255 255);
-	text-decoration: none;
-	display: inline-block;
-	padding: 0.5em;
-	border-radius: 0.25em;
 }
 
 .skip {
@@ -349,7 +261,7 @@ app-bar.sticky nav ul li a:hover:after {
 .rating__people .star:after {
     color: #0003;
 }
-.button {
+.detail-button {
     min-width: 44px;
     min-height: 44px;
     font-family: 'Nanum Gothic', sans-serif;
@@ -367,7 +279,7 @@ app-bar.sticky nav ul li a:hover:after {
     position: relative;
     text-decoration: none;
 }
-.button:hover {
+.detail-button:hover {
     background-color: #ff9e16;
 }
 .even {

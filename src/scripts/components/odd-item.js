@@ -28,7 +28,7 @@ class OddItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="odd-description">${this._restaurant.description} </p>
-                        <a class="button" href="${`/#/restaurant/${this._restaurant.id}`}" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</a>
+                        <a class="detail-button" id="detail-button" href="${`/#/restaurant/${this._restaurant.id}`}" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</a>
                     </div>
                 </article>
         `;

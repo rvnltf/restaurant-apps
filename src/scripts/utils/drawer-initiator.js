@@ -1,6 +1,6 @@
 const DrawerInitiator = {
   init({
-    button, drawer, content, appBar,
+    button, drawer, content, appBar, detailButton,
   }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer, appBar);
@@ -13,6 +13,10 @@ const DrawerInitiator = {
     window.addEventListener('scroll', () => {
       appBar.classList.toggle('sticky', window.scrollY > 200);
     });
+
+    // detailButton.addEventListener('click', () => {
+    //   appBar.classList.toggle('sticky');
+    // });
   },
 
   _toggleDrawer(event, drawer, appBar) {

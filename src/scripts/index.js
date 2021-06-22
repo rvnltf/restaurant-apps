@@ -1,8 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import './components/app-bar';
 import App from './views/app';
+import './components/app-bar';
 
 const app = new App({
   button: document.querySelector('#menu'),
