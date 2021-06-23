@@ -134,4 +134,7 @@
     .rating .star {
         font-size: 16px;
     }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

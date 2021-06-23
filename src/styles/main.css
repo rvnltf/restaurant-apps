@@ -12,22 +12,22 @@ body, html {
     color: #2d2d28;
 }
 
-#card_1 {
+#detail_1 {
 	--index: 1;
 }
 
-.card {
+.detail {
 	position: sticky;
 	top: 0;
 	/* padding-top: calc(var(--index) * 10px); */
 }
 
-#cards {
+#details {
 	list-style: none;
 	display: grid;
 	grid-template-columns: 1fr;
 }
-.card__content {
+.detail__content {
     position: relative;
     height: 500px;
 	box-shadow: 0 2px 10px rgba(45, 45, 40, 0.1), 0 10px 20px rgba(45, 45, 40, 0.1);
@@ -40,11 +40,11 @@ body, html {
 	grid-template-rows: auto;
 }
 
-.card__content > div {
+.detail__content > div {
     padding: 30px;
 }
 
-.card__content > figure {
+.detail__content > figure {
     width: 100%;
 	overflow: hidden;
 }
@@ -57,7 +57,17 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(45, 45, 40, 0.65 );
+    background-color: rgba(45, 45, 40, 0.65);
+}
+
+.welcome,.detail-title {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #f7f2ed;
+    font-weight: bold;
+}
+
+.detail-title {
+    font-size: 36px;
 }
 
 .address {
@@ -72,11 +82,19 @@ body, html {
     text-align: justify;
 }
 
-.card__content > figure > img {
+.detail__content > figure > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 15px;
+    background-color: #fff;
+  }
 
 .skip {
     min-width: 44px;

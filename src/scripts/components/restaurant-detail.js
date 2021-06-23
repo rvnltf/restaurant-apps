@@ -9,13 +9,14 @@ class RestaurantDetail extends HTMLElement {
   render() {
     const rating = this._restaurant.rating.toString();
     this.innerHTML = `
-    <ul id="cards">
-      <li class="card" id="card_1">
-        <div class="card__content">
+    <ul id="details">
+      <li class="detail" id="detail_1">
+        <div class="detail__content">
           <figure>
             <img src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}" alt="${CONFIG.BASE_IMAGE_URL_MEDIUM + this._restaurant.pictureId}">
             <div class="caption">
-              <h1 class="even-title">${this._restaurant.name}</h1>
+              <h3 class="welcome">WELCOME TO</h3>
+              <h1 class="detail-title">${this._restaurant.name.toUpperCase()}</h1>
               <div class="review">
                   <p>${this._restaurant.city}</p>
                   <p>${rating}</p>
@@ -32,12 +33,29 @@ class RestaurantDetail extends HTMLElement {
           </figure>
         </div>
       </li>
-      <li class="card" id="card_2">
-        <div class="card__content">
+      <li class="detail" id="detail_2">
+        <div class="detail__content">
           <div class="content-detail">
             <h2>${this._restaurant.name}</h2>
             <p class="address">${this._restaurant.address}, ${this._restaurant.city}</p>
             <p class="description">${this._restaurant.description}</p>
+            <div class="category-detail">
+            <h3>Categories</h3>
+              <ul class="category">`;
+    this._restaurant.categories.forEach((category) => {
+      const categoryTag = document.createElement('li');
+      categoryTag.innerHTML = category.name;
+      const categoryClass = document.querySelector('.category');
+      categoryClass.appendChild(categoryTag);
+    });
+    this.innerHTML += `
+              </ul>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card">ONE</div>
+            <div class="card">TWO</div>
+            <div class="card">THREE</div>
           </div>
         </div>
       </li>
