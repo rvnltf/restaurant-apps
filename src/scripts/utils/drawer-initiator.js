@@ -13,10 +13,6 @@ const DrawerInitiator = {
     window.addEventListener('scroll', () => {
       appBar.classList.toggle('sticky', window.scrollY > 200);
     });
-
-    // detailButton.addEventListener('click', () => {
-    //   appBar.classList.toggle('sticky');
-    // });
   },
 
   _toggleDrawer(event, drawer, appBar) {
@@ -27,7 +23,7 @@ const DrawerInitiator = {
 
   _closeDrawer(event, drawer, appBar) {
     drawer.classList.remove('open');
-    appBar.classList.toggle('header');
+    appBar.classList.remove('header');
     event.stopPropagation();
   },
 };

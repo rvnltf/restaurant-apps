@@ -7,6 +7,7 @@ class RestaurantDetail extends HTMLElement {
   }
 
   render() {
+    const { menus } = this._restaurant;
     const rating = this._restaurant.rating.toString();
     this.innerHTML = `
     <ul id="details">
@@ -36,28 +37,40 @@ class RestaurantDetail extends HTMLElement {
       <li class="detail" id="detail_2">
         <div class="detail__content">
           <div class="content-detail">
-            <h2>${this._restaurant.name}</h2>
+            <h2 class="detail-title">${this._restaurant.name}</h2>
             <p class="address">${this._restaurant.address}, ${this._restaurant.city}</p>
-            <p class="description">${this._restaurant.description}</p>
-            <div class="category-detail">
-            <h3>Categories</h3>
-              <ul class="category">`;
-    this._restaurant.categories.forEach((category) => {
-      const categoryTag = document.createElement('li');
-      categoryTag.innerHTML = category.name;
-      const categoryClass = document.querySelector('.category');
-      categoryClass.appendChild(categoryTag);
-    });
-    this.innerHTML += `
+            <p class="description">${this._restaurant.description}</p><br>
+            <h3>Categories : ${this._restaurant.categories.map((category) => category.name)}</h3>
+          </div>
+          <hr><br>
+          <h2 class="menus">- MENU -</h2>
+          <div class="cards-menu">
+            <div class="card">
+              <h3 class="menus">FOODS</h3>
+              <ul class="foods">
+              ${menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="card">
+              <h3 class="menus">DRINKS</h3>
+              <ul class="drinks">
+              ${menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
               </ul>
             </div>
           </div>
-          <div class="cards">
-            <div class="card">ONE</div>
-            <div class="card">TWO</div>
-            <div class="card">THREE</div>
+          <h2 class="menus">- REVIEW -</h2>
+          <div class="cards-review">
+            <div class="card">
+              ${this._restaurant.customerReviews.map((review) => `
+              <h3>${review.name}</h3>
+              <p class="address">${review.date}</p>
+              <p>${review.review}</p><hr>
+              `).join('')}
+              
+            </div>
           </div>
         </div>
+      </div>
       </li>
     </ul>
         `;
