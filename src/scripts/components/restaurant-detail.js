@@ -18,18 +18,6 @@ class RestaurantDetail extends HTMLElement {
             <div class="caption">
               <h3 class="welcome">WELCOME TO</h3>
               <h1 class="detail-title">${this._restaurant.name.toUpperCase()}</h1>
-              <div class="review">
-                  <p>${this._restaurant.city}</p>
-                  <p>${rating}</p>
-                  <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
-                      <div class="ratings">
-                          <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                          </div>
-                          <div class="rating__people"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
             </div>
           </figure>
         </div>
@@ -47,6 +35,7 @@ class RestaurantDetail extends HTMLElement {
           <div class="cards-menu">
             <div class="card">
               <h3 class="menus">FOODS</h3>
+              <hr>
               <ul class="foods">
               ${menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
               </ul>
@@ -54,11 +43,22 @@ class RestaurantDetail extends HTMLElement {
             <div class="card">
               <h3 class="menus">DRINKS</h3>
               <ul class="drinks">
+              <hr>
               ${menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
               </ul>
             </div>
           </div>
           <h2 class="menus">- REVIEW -</h2>
+          <div class="review">
+            <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
+                <div class="ratings">
+                    <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                    </div>
+                    <div class="rating__people"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                    </div>
+                </div>
+            </div>
+          </div>
           <div class="cards-review">
             <div class="card">
               ${this._restaurant.customerReviews.map((review) => `

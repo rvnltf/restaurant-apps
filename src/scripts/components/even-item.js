@@ -28,7 +28,7 @@ class evenItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="even-description">${this._restaurant.description}</p>
-                        <a class="detail-button" id="detail-button" href="${`/#/restaurant/${this._restaurant.id}`}" aria-label="read more">Read More</a>
+                        <a class="detail-button" href="${`/#/restaurant/${this._restaurant.id}`}" aria-label="read more">Read More</a>
                     </div>
                 </article>
         `;

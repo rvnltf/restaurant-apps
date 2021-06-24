@@ -137,4 +137,16 @@
     .cards-menu {
         grid-template-columns: repeat(2, 1fr);
     }
+    .caption { 
+        padding: 30px;
+    }
+    .welcome {
+        font-size: 36px;
+    }
+    .detail-title {
+        font-size: 54px;
+    }
+    #favorite-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
