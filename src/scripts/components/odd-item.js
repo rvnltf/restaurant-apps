@@ -1,4 +1,4 @@
-import CONFIG from "../globals/config";
+import CONFIG from '../globals/config';
 
 class OddItem extends HTMLElement {
   set restaurant(restaurant) {
@@ -12,9 +12,9 @@ class OddItem extends HTMLElement {
                 <article class="odd">
                     <figure class="odd-figure">
                         <img src="${
-                          CONFIG.BASE_IMAGE_URL_SMALL +
-                          this._restaurant.pictureId
-                        }" alt="Picture of ${this._restaurant.city}">
+  CONFIG.BASE_IMAGE_URL_SMALL
+                          + this._restaurant.pictureId
+}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="odd-content">
                         <h1 class="odd-title">${this._restaurant.name}</h1>
@@ -22,9 +22,9 @@ class OddItem extends HTMLElement {
                             <p>${this._restaurant.city}</p>
                             <p>${rating}</p>
                             <div class="rating" style="--nilai: 0.${rating.replace(
-                              ".",
-                              ""
-                            )};">
+    '.',
+    '',
+  )};">
                                 <div class="ratings">
                                     <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
                                     </div>
@@ -34,8 +34,8 @@ class OddItem extends HTMLElement {
                             </div>
                         </div>
                         <p class="odd-description">${
-                          this._restaurant.description
-                        } </p>
+  this._restaurant.description
+} </p>
                         <a class="detail-button" href="${`/#/restaurant/${this._restaurant.id}`}" style="box-shadow: 3px 3px 1px #aaaaaa; "aria-label="read more">Read More</a>
                     </div>
                 </article>
@@ -43,4 +43,4 @@ class OddItem extends HTMLElement {
   }
 }
 
-customElements.define("odd-item", OddItem);
+customElements.define('odd-item', OddItem);

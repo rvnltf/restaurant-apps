@@ -1,6 +1,6 @@
 const DrawerInitiator = {
   init({
-    button, drawer, content, appBar, detailButton,
+    button, drawer, content, appBar,
   }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer, appBar);

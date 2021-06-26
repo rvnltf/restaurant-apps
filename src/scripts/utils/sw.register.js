@@ -5,8 +5,6 @@ const swRegister = async () => {
     await runtime.register();
     return;
   }
-
-  console.log('Service Worker not supported in this browser');
 };
 
 export default swRegister;
