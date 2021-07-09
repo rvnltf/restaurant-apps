@@ -2,7 +2,8 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import '../../components/restaurant-detail';
 import '../../components/like-button';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Restaurant = {
   async render() {
@@ -20,8 +21,9 @@ const Restaurant = {
     restaurantDetail.restaurant = restaurant.restaurant;
     detail.appendChild(restaurantDetail);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteRestaurant: FavoriteRestaurantIdb,
       restaurant: {
         id: restaurant.restaurant.id,
         name: restaurant.restaurant.name,
