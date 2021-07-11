@@ -14,7 +14,7 @@ class evenItem extends HTMLElement {
                         <img src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="even-content">
-                        <h1 class="even-title">${this._restaurant.name}</h1>
+                        <h1 class="even-title restaurant__title">${this._restaurant.name}</h1>
                         <div class="review">
                             <p>${this._restaurant.city}</p>
                             <p>${rating}</p>

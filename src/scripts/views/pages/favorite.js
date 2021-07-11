@@ -17,11 +17,19 @@ const Favorite = {
     const main = document.querySelector('main');
     const heroElement = document.createElement('hero-element');
     main.insertBefore(heroElement, main.firstElementChild);
-    restaurants.forEach((restaurant) => {
-      const favoriteElement = document.createElement('favorite-element');
-      favoriteElement.restaurant = restaurant;
-      favoriteCard.appendChild(favoriteElement);
-    });
+    if (restaurants.length) {
+      restaurants.forEach((restaurant) => {
+        const favoriteElement = document.createElement('favorite-element');
+        favoriteElement.restaurant = restaurant;
+        favoriteCard.appendChild(favoriteElement);
+      });
+    } else {
+      favoriteCard.innerHTML = this._getEmptyMovieTemplate();
+    }
+  },
+
+  _getEmptyMovieTemplate() {
+    return '<div class="restaurant-item__not__found">Tidak ada Restaurant untuk ditampilkan</div>';
   },
 };
 

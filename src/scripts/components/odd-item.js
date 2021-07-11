@@ -17,7 +17,7 @@ class OddItem extends HTMLElement {
 }" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="odd-content">
-                        <h1 class="odd-title">${this._restaurant.name}</h1>
+                        <h1 class="odd-title restaurant__title">${this._restaurant.name}</h1>
                         <div class="review">
                             <p>${this._restaurant.city}</p>
                             <p>${rating}</p>

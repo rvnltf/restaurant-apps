@@ -12,7 +12,7 @@ class FavoriteElement extends HTMLElement {
             <div class="card">
                 <img src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="${this._restaurant.name}">
                 <div class="favorite-description">
-                <h2>${this._restaurant.name}</h2>
+                <h2 class="restaurant__title">${this._restaurant.name}</h2>
                 <div class="review">
                   <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
                       <div class="ratings">
