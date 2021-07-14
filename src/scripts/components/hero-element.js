@@ -1,4 +1,4 @@
-import foto from '../../public/images/heros/hero-image_4.jpg';
+// import foto from '../../public/images/heros/hero-image_4.jpg';
 
 class HeroElement extends HTMLElement {
   connectedCallback() {
@@ -14,8 +14,10 @@ class HeroElement extends HTMLElement {
             min-height: 500px;
             width: 100%;
             padding: 30px;
-            background-image: url("${foto}");
+            background-image: url("./images/heros/hero-image_4-small.jpg");
+            background-repeat:no-repeat;
             background-position: center;
+            background-size: cover;
             color: #f7f2ed;
             transition: 0.6s;
         }
@@ -44,6 +46,9 @@ class HeroElement extends HTMLElement {
             }
         }
         @media screen and (min-width: 700px) {
+            .jumbotron{
+                background-image: url("./images/heros/hero-image_4-large.jpg");
+            }
             .hero {
                 max-width: 900px;
                 padding: 40px;
