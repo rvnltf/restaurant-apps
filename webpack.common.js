@@ -82,7 +82,10 @@ module.exports = {
           progressive: true,
         }),
       ],
+    }), new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+      generateStatsFile: true,
+      statsOptions: { source: false },
     }),
-    new BundleAnalyzerPlugin(),
   ],
 };
