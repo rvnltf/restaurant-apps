@@ -11,7 +11,7 @@ class evenItem extends HTMLElement {
     this.innerHTML = `
                 <article class="even">
                     <figure class="even-figure">
-                        <img src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
+                        <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="Picture of ${this._restaurant.city}">
                     </figure>
                     <div class="even-content">
                         <h1 class="even-title restaurant__title">${this._restaurant.name}</h1>

@@ -11,7 +11,7 @@ class OddItem extends HTMLElement {
     this.innerHTML = `
                 <article class="odd">
                     <figure class="odd-figure">
-                        <img src="${
+                        <img class="lazyload" src="${
   CONFIG.BASE_IMAGE_URL_SMALL
                           + this._restaurant.pictureId
 }" alt="Picture of ${this._restaurant.city}">

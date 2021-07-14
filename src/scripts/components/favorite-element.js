@@ -10,7 +10,7 @@ class FavoriteElement extends HTMLElement {
     const rating = this._restaurant.rating.toString();
     this.innerHTML = `
             <div class="card">
-                <img src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="${this._restaurant.name}">
+                <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_SMALL + this._restaurant.pictureId}" alt="${this._restaurant.name}">
                 <div class="favorite-description">
                 <h2 class="restaurant__title">${this._restaurant.name}</h2>
                 <div class="review">
