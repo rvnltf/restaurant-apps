@@ -14,7 +14,7 @@ class RestaurantDetail extends HTMLElement {
       <li class="detail" id="detail_1">
         <div class="detail__content">
           <figure>
-            <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}" alt="${CONFIG.BASE_IMAGE_URL_MEDIUM + this._restaurant.pictureId}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId}" alt="${CONFIG.BASE_IMAGE_URL_MEDIUM + this._restaurant.pictureId}">
             <div class="caption">
               <h3 class="welcome">WELCOME TO</h3>
               <h1 class="detail-title">${this._restaurant.name.toUpperCase()}</h1>
