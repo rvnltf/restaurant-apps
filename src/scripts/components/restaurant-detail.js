@@ -1,4 +1,4 @@
-import CONFIG from "../globals/config";
+import CONFIG from '../globals/config';
 
 class RestaurantDetail extends HTMLElement {
   set restaurant(restaurant) {
@@ -15,10 +15,10 @@ class RestaurantDetail extends HTMLElement {
         <div class="detail__content">
           <figure>
             <img class="lazyload" data-src="${
-              CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId
-            }" alt="${
-      CONFIG.BASE_IMAGE_URL_MEDIUM + this._restaurant.pictureId
-    }">
+  CONFIG.BASE_IMAGE_URL_LARGE + this._restaurant.pictureId
+}" alt="${
+  CONFIG.BASE_IMAGE_URL_MEDIUM + this._restaurant.pictureId
+}">
             <div class="caption">
               <h3 class="welcome">WELCOME TO</h3>
               <h1 class="detail-title">${this._restaurant.name.toUpperCase()}</h1>
@@ -34,8 +34,8 @@ class RestaurantDetail extends HTMLElement {
             <p class="address">${this._restaurant.address}, ${this._restaurant.city}</p>
             <p class="description">${this._restaurant.description}</p><br>
             <h3>Categories : ${this._restaurant.categories.map(
-              (category) => category.name
-            )}</h3>
+    (category) => category.name,
+  )}</h3>
           </div>
           <hr><br>
           <h2 class="menus">- MENU -</h2>
@@ -44,19 +44,19 @@ class RestaurantDetail extends HTMLElement {
               <h3 class="menus">FOODS</h3>
               <hr>
               <ul class="foods">
-              ${menus.foods.map((food) => `<li>${food.name}</li>`).join("")}
+              ${menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
               </ul>
             </div>
             <div class="card">
               <h3 class="menus">DRINKS</h3>
               <ul class="drinks">
               <hr>
-              ${menus.drinks.map((drink) => `<li>${drink.name}</li>`).join("")}
+              ${menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
               </ul>
             </div>
           </div>
           <h2 class="menus">- REVIEW -</h2>
-            <div class="rating" style="--nilai: 0.${rating.replace(".", "")};">
+            <div class="rating" style="--nilai: 0.${rating.replace('.', '')};">
                 <div class="ratings">
                     <div class="rating__blank"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
                     </div>
@@ -66,14 +66,14 @@ class RestaurantDetail extends HTMLElement {
             </div>
             <div class="review-detail">
               ${this._restaurant.customerReviews
-                .map(
-                  (review) => `
+    .map(
+      (review) => `
               <h3>${review.name}</h3>
               <p class="address">${review.date}</p>
               <p>${review.review}</p><hr>
-              `
-                )
-                .join("")}
+              `,
+    )
+    .join('')}
             </div>
         </div>
       </li>
@@ -82,4 +82,4 @@ class RestaurantDetail extends HTMLElement {
   }
 }
 
-customElements.define("restaurant-detail", RestaurantDetail);
+customElements.define('restaurant-detail', RestaurantDetail);

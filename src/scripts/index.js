@@ -5,7 +5,7 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import swRegister from './utils/sw.register';
-import './components/app-bar';  
+import './components/app-bar';
 
 const app = new App({
   button: document.querySelector('#menu'),
