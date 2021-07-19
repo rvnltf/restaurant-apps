@@ -2,9 +2,9 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "7720b59825304f1dcfae",
-  "time": 701,
-  "builtAt": 1626667159081,
+  "hash": "0fb404cae249420988a1",
+  "time": 684,
+  "builtAt": 1626670384039,
   "publicPath": "",
   "outputPath": "D:\\MyProject\\restaurant-apps\\dist",
   "assetsByChunkName": {
@@ -19,7 +19,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 68232,
+      "size": 68295,
       "chunks": [
         "main~._m"
       ],
@@ -308,9 +308,9 @@
           "chunks": [
             "defaultVendors~main~._node_modules_a"
           ],
-          "issuer": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-          "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
-          "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
+          "issuer": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
           "issuerPath": [
             {
               "id": "./src/scripts/index.js",
@@ -318,14 +318,14 @@
               "name": "./src/scripts/index.js"
             },
             {
-              "id": "./src/styles/main.css",
-              "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\style-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-              "name": "./src/styles/main.css"
+              "id": "./src/styles/responsive.css",
+              "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\style-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+              "name": "./src/styles/responsive.css"
             },
             {
-              "id": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
-              "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-              "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css"
+              "id": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
+              "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css"
             }
           ],
           "failed": false,
@@ -2756,14 +2756,14 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 37371,
+      "size": 37418,
       "names": [
         "main~._m"
       ],
       "files": [
         "bundle.js"
       ],
-      "hash": "fe16b3e20fd3dcca562f",
+      "hash": "806d315aefe02c23d832",
       "siblings": [
         "defaultVendors~main~._node_modules_a",
         "defaultVendors~main~._node_modules_h",
@@ -2816,9 +2816,9 @@
           "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
           "index": 39,
           "index2": 37,
-          "size": 9827,
+          "size": 9850,
           "cacheable": true,
-          "built": false,
+          "built": true,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -3292,7 +3292,7 @@
           "name": "./src/scripts/components/restaurant-detail.js",
           "index": 59,
           "index2": 54,
-          "size": 3035,
+          "size": 3059,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -3720,7 +3720,7 @@
               "moduleName": "./src/scripts/components/restaurant-detail.js",
               "type": "harmony import specifier",
               "userRequest": "../globals/config",
-              "loc": "17:46-52"
+              "loc": "18:14-20"
             },
             {
               "moduleId": "./src/scripts/components/restaurant-detail.js",
@@ -3729,7 +3729,7 @@
               "moduleName": "./src/scripts/components/restaurant-detail.js",
               "type": "harmony import specifier",
               "userRequest": "../globals/config",
-              "loc": "17:112-118"
+              "loc": "20:6-12"
             },
             {
               "moduleId": "./src/scripts/data/favorite-restaurant-idb.js",
@@ -4410,7 +4410,7 @@
           "index2": 56,
           "size": 424,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -4680,9 +4680,9 @@
       "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
       "index": 39,
       "index2": 37,
-      "size": 9827,
+      "size": 9850,
       "cacheable": true,
-      "built": false,
+      "built": true,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -4784,9 +4784,9 @@
       "chunks": [
         "defaultVendors~main~._node_modules_a"
       ],
-      "issuer": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-      "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
-      "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
+      "issuer": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+      "issuerId": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
+      "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
       "issuerPath": [
         {
           "id": "./src/scripts/index.js",
@@ -4794,14 +4794,14 @@
           "name": "./src/scripts/index.js"
         },
         {
-          "id": "./src/styles/main.css",
-          "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\style-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-          "name": "./src/styles/main.css"
+          "id": "./src/styles/responsive.css",
+          "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\style-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+          "name": "./src/styles/responsive.css"
         },
         {
-          "id": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css",
-          "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\main.css",
-          "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css"
+          "id": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css",
+          "identifier": "D:\\MyProject\\restaurant-apps\\node_modules\\css-loader\\dist\\cjs.js!D:\\MyProject\\restaurant-apps\\src\\styles\\responsive.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./src/styles/responsive.css"
         }
       ],
       "failed": false,
@@ -7405,7 +7405,7 @@
       "name": "./src/scripts/components/restaurant-detail.js",
       "index": 59,
       "index2": 54,
-      "size": 3035,
+      "size": 3059,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -7833,7 +7833,7 @@
           "moduleName": "./src/scripts/components/restaurant-detail.js",
           "type": "harmony import specifier",
           "userRequest": "../globals/config",
-          "loc": "17:46-52"
+          "loc": "18:14-20"
         },
         {
           "moduleId": "./src/scripts/components/restaurant-detail.js",
@@ -7842,7 +7842,7 @@
           "moduleName": "./src/scripts/components/restaurant-detail.js",
           "type": "harmony import specifier",
           "userRequest": "../globals/config",
-          "loc": "17:112-118"
+          "loc": "20:6-12"
         },
         {
           "moduleId": "./src/scripts/data/favorite-restaurant-idb.js",
@@ -8523,7 +8523,7 @@
       "index2": 56,
       "size": 424,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -8812,7 +8812,7 @@
           "name": "sw.js",
           "size": 34708,
           "chunks": [
-            1
+            0
           ],
           "chunkNames": [],
           "info": {},
@@ -8823,7 +8823,7 @@
       "entrypoints": {
         "undefined": {
           "chunks": [
-            1
+            0
           ],
           "assets": [
             "sw.js"
@@ -8835,7 +8835,7 @@
       "namedChunkGroups": {
         "undefined": {
           "chunks": [
-            1
+            0
           ],
           "assets": [
             "sw.js"
@@ -8846,7 +8846,7 @@
       },
       "chunks": [
         {
-          "id": 1,
+          "id": 0,
           "rendered": false,
           "initial": true,
           "entry": true,
@@ -8855,7 +8855,7 @@
           "files": [
             "sw.js"
           ],
-          "hash": "5b5a9865729b4c1f4790",
+          "hash": "23d4868cc2b5311bc180",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -8873,7 +8873,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                1
+                0
               ],
               "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
               "issuerId": "./src/scripts/sw.js",
@@ -8916,7 +8916,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                1
+                0
               ],
               "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
               "issuerId": "./src/scripts/sw.js",
@@ -8959,7 +8959,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                1
+                0
               ],
               "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\utils\\cache-helper.js",
               "issuerId": "./src/scripts/utils/cache-helper.js",
@@ -9027,7 +9027,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                1
+                0
               ],
               "issuer": null,
               "issuerId": null,
@@ -9063,7 +9063,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                1
+                0
               ],
               "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
               "issuerId": "./src/scripts/sw.js",
@@ -9150,7 +9150,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            1
+            0
           ],
           "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
           "issuerId": "./src/scripts/sw.js",
@@ -9193,7 +9193,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            1
+            0
           ],
           "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
           "issuerId": "./src/scripts/sw.js",
@@ -9236,7 +9236,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            1
+            0
           ],
           "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\utils\\cache-helper.js",
           "issuerId": "./src/scripts/utils/cache-helper.js",
@@ -9304,7 +9304,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            1
+            0
           ],
           "issuer": null,
           "issuerId": null,
@@ -9340,7 +9340,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            1
+            0
           ],
           "issuer": "D:\\MyProject\\restaurant-apps\\src\\scripts\\sw.js",
           "issuerId": "./src/scripts/sw.js",
